@@ -8,13 +8,16 @@ public class DIce
     public int maxValue = 0; 
     KeyWord diceKeyWord = KeyWord.None;
 }
-abstract class Skill
+public abstract class Skill
 {
     /// <summary>
     /// 스킬의 주사위 
     /// </summary>
     public DIce[] skillDice = new DIce[0];
 
+    /// <summary>
+    /// 현재 굴리는 주사위
+    /// </summary>
     public DIce currentDice = null;
 
     /// <summary>

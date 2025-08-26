@@ -1,6 +1,6 @@
 using UnityEngine;
 
-abstract class UnitBase
+public abstract class UnitBase
 {
     /// <summary>
     /// 최대체력
