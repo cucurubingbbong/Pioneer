@@ -18,9 +18,22 @@ public class ClashManager : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// гу
+    /// </summary>
     void Clash()
     {
+        for (int i = 0; i < clashSkillList.Count; i++)
+        {
+            Skill playerSkill = clashSkillList[i].PlayerSkill;
+            Skill enemySkill = clashSkillList[i].EnemySkill;
 
+            //int clashDiceCount = (playerSkill.skillDice.Length == enemySkill.skillDice.Length) ? playerSkill.skillDice.Length : (playerSkill.skillDice.Length > enemySkill.skillDice.Length) ? playerSkill.skillDice.Length : enemySkill.skillDice.Length;
+            int clashDiceCount = Mathf.Max(playerSkill.skillDice.Length, enemySkill.skillDice.Length);
+
+
+
+        }
     }
 
 
