@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GManager : MonoBehaviour
@@ -16,4 +17,14 @@ public class GManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    /// <summary>
+    /// 날짜
+    /// </summary>
+    public int Day = 0;
+
+    /// <summary>
+    /// 유닛들 목록 
+    /// </summary>
+    public List<UnitBase> PlayerUnits = new List<UnitBase>();
 }

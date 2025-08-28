@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9726eaf8b65fdda41b069d1923eb27c2, type: 3}
-  m_Name: New Skill
+  m_Name: Slash
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: "\uBCA0\uAE30"
   skillDice:
-  - minValue: 0
-    maxValue: 0
+  - minValue: 2
+    maxValue: 5
     effect: {fileID: 11400000, guid: 4d99053d7ddd99d44b8c65173dce76a0, type: 2}

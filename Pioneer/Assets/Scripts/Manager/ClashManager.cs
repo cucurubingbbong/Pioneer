@@ -4,5 +4,24 @@ using UnityEngine;
 
 public class ClashManager : MonoBehaviour
 {
-   public List<Skill> clashSkillList;
+    [System.Serializable]
+    public class ClashPoint
+    {
+        public Skill PlayerSkill;
+        public Skill EnemySkill;
+    }
+
+    public List<ClashPoint> clashSkillList;
+
+    public void BattleStart()
+    {
+
+    }
+
+    void Clash()
+    {
+
+    }
+
+
 }

@@ -1,34 +1,47 @@
+using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public abstract class UnitBase
+
+[System.Serializable]
+public class UnitBase
 {
+    /// <summary>
+    /// 유닛이름
+    /// </summary>
+    public string unitName = null;
+
+    /// <summary>
+    /// 스킬 리스트
+    /// </summary>
+    public List<Skill> skillList = new List<Skill>();
     /// <summary>
     /// 최대체력
     /// </summary>
-    [SerializeField] float maxHp = 0.0f;
+    public float maxHp = 0.0f;
 
     /// <summary>
     /// 현재체력
     /// </summary>
-    [SerializeField] float currentHp = 0.0f;
+    public float currentHp = 0.0f;
 
     /// <summary>
     /// 공격레벨
     /// </summary>
-    [SerializeField] int attackLevel = 0;
+    public int attackLevel = 0;
 
     /// <summary>
     /// 방어레벨
     /// </summary>
-    [SerializeField] int defenseLevel = 0;
+    public int defenseLevel = 0;
 
     /// <summary>
     /// 속도
     /// </summary>
-    [SerializeField] int speed = 0;
+    public int speed = 0;
 
     /// <summary>
     /// 정신력
     /// </summary>
-    [SerializeField] int mentalPower = 0;
+    public int mentalPower = 0;
 }

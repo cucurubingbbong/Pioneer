@@ -12,20 +12,21 @@ public class Dice
     [SerializeField]
     public DiceEffect effect;
 
-
     public void Apply(UnitBase caster, UnitBase target, int value)
     {
         effect?.Apply(caster, target, value);
     }
 }
 
+/// <summary>
+/// 주사위 이펙트 적용 추상클래스 ( 설계도 )
+/// </summary>
 public abstract class DiceEffect : ScriptableObject
 {
     public abstract void Apply(UnitBase caster, UnitBase target, int value);
 }
 
 [CreateAssetMenu(menuName = "DiceEffect/DamageEffect")]
-[System.Serializable]
 public class DamageEffect : DiceEffect 
 {
     public override void Apply(UnitBase caster, UnitBase target, int value)
