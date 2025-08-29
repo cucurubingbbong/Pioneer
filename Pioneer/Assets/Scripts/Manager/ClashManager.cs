@@ -45,10 +45,13 @@ public class ClashManager : MonoBehaviour
         int playerValue = RollDiceSafe(playerSkill, index, playerUnit);
         int enemyValue = RollDiceSafe(enemySkill, index, enemyUnit);
 
+        // 일방공격 처리 넣을예정
+
         ApplyAttackLevelBonus(ref playerValue, ref enemyValue, playerUnit.attackLevel, enemyUnit.attackLevel);
 
         // 위력 증가, 효과 적용 등 넣을예정
-        Debug.Log($"Dice {index}: Player({playerValue}) vs Enemy({enemyValue})");
+        
+        // 주사위값으로 합 진행
     }
 
     /// <summary>
