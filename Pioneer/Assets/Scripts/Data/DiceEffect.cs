@@ -16,6 +16,8 @@ public class Dice
     {
         effect?.Apply(caster, target, value);
     }
+
+
 }
 
 /// <summary>
