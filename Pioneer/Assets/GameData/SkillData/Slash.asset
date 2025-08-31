@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: "\uBCA0\uAE30"
   skillDice:
-  - minValue: 2
-    maxValue: 5
-    effect: {fileID: 11400000, guid: 4d99053d7ddd99d44b8c65173dce76a0, type: 2}
+  - minValue: 0
+    maxValue: 0
+    effect: {fileID: 0}
