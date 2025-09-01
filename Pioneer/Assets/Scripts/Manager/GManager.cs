@@ -22,9 +22,4 @@ public class GManager : MonoBehaviour
     /// 날짜
     /// </summary>
     public int Day = 0;
-
-    /// <summary>
-    /// 유닛들 목록 
-    /// </summary>
-    public List<UnitBase> PlayerUnits = new List<UnitBase>();
 }

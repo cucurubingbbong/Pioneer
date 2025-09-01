@@ -34,8 +34,5 @@ public class Skill : ScriptableObject
 
         return value;
     }
-
-
-
 }
 

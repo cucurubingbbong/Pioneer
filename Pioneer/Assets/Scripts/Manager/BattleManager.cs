@@ -1,8 +1,7 @@
-using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClashManager : MonoBehaviour
+public class BattleManager : MonoBehaviour
 {
     [System.Serializable]
     public class ClashPoint
@@ -13,7 +12,15 @@ public class ClashManager : MonoBehaviour
         public Skill EnemySkill;
     }
 
+    /// <summary>
+    /// 합 스킬 리스트
+    /// </summary>
     public List<ClashPoint> clashSkillList;
+
+    /// <summary>
+    /// 배틀하는 플레이어 유닛
+    /// </summary>
+    public UnitBase[] battlePlayerUnit = new UnitBase[6];
 
     private void Start()
     {
@@ -38,6 +45,17 @@ public class ClashManager : MonoBehaviour
     }
 
     /// <summary>
+    /// 사무소에서 전투가능한 유닛베이스 받아오기
+    /// </summary>
+    void GetUnitBase()
+    {
+        for (int i = 0; i < 6; i++)
+        {
+            battlePlayerUnit[i] = PlayerOffiece.Instance.officeBattleUnits[i];
+        }
+    }
+
+    /// <summary>
     /// 주사위 1개 단위의 충돌 처리
     /// </summary>
     void HandleClashDice(int index, Skill playerSkill, Skill enemySkill, UnitBase playerUnit, UnitBase enemyUnit)
@@ -50,7 +68,7 @@ public class ClashManager : MonoBehaviour
         ApplyAttackLevelBonus(ref playerValue, ref enemyValue, playerUnit.attackLevel, enemyUnit.attackLevel);
 
         // 위력 증가, 효과 적용 등 넣을예정
-        
+
         // 주사위값으로 합 진행
     }
 
@@ -76,7 +94,4 @@ public class ClashManager : MonoBehaviour
         else if (enemyAtkLevel > playerAtkLevel)
             enemyValue += diff / 3;
     }
-
-
-
 }
