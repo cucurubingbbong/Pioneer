@@ -60,38 +60,62 @@ public class BattleManager : MonoBehaviour
     /// </summary>
     void HandleClashDice(int index, Skill playerSkill, Skill enemySkill, UnitBase playerUnit, UnitBase enemyUnit)
     {
+        // 1. 주사위 값 굴림
         int playerValue = RollDiceSafe(playerSkill, index, playerUnit);
         int enemyValue = RollDiceSafe(enemySkill, index, enemyUnit);
 
-        // 일방공격 처리 넣을예정
+        // 2. 일방 공격 (상대 주사위 없다면 그냥 공격 성공)
+        if (enemySkill == null || index >= enemySkill.skillDice.Length)
+        {
+            playerSkill.skillDice[index].Apply(playerUnit, enemyUnit, playerValue);
+            return;
+        }
 
+        // 3. 보정 (스탯, 버프/디버프 등)
         ApplyAttackLevelBonus(ref playerValue, ref enemyValue, playerUnit.attackLevel, enemyUnit.attackLevel);
 
-        // 위력 증가, 효과 적용 등 넣을예정
+        // 4. 비교
+        if (playerValue > enemyValue)
+        {
+            playerSkill.skillDice[index].Apply(playerUnit, enemyUnit, playerValue);
+            enemySkill.skillDice[index].Break(); // 진 주사위는 파괴
+        }
+        else if (playerValue < enemyValue)
+        {
+            enemySkill.skillDice[index].Apply(enemyUnit, playerUnit, enemyValue);
+            playerSkill.skillDice[index].Break(); // 진 주사위는 파괴
+        }
+        else
+        {
+            // 5. 무승부  둘 다 파괴
+            playerSkill.skillDice[index].Break();
+            enemySkill.skillDice[index].Break();
 
-        // 주사위값으로 합 진행
+            Debug.Log($"무승부 발생! {playerUnit.unitName}와 {enemyUnit.unitName}의 주사위({playerValue})가 파괴되었습니다.");
+        }
     }
+
 
     /// <summary>
     /// 주사위 굴림 (없는 인덱스면 0 반환)
     /// </summary>
     int RollDiceSafe(Skill skill, int index, UnitBase unit)
-    {
-        if (index < skill.skillDice.Length)
-            return skill.rollDice(index, unit);
-        return 0; // 없는 주사위는 0으로 처리
-    }
+        {
+            if (index < skill.skillDice.Length)
+                return skill.rollDice(index, unit);
+            return 0; // 없는 주사위는 0으로 처리
+        }
 
-    /// <summary>
-    /// 공격 레벨 보정 적용
-    /// </summary>
-    void ApplyAttackLevelBonus(ref int playerValue, ref int enemyValue, int playerAtkLevel, int enemyAtkLevel)
-    {
-        int diff = Mathf.Abs(playerAtkLevel - enemyAtkLevel);
+        /// <summary>
+        /// 공격 레벨 보정 적용
+        /// </summary>
+        void ApplyAttackLevelBonus(ref int playerValue, ref int enemyValue, int playerAtkLevel, int enemyAtkLevel)
+        {
+            int diff = Mathf.Abs(playerAtkLevel - enemyAtkLevel);
 
-        if (playerAtkLevel > enemyAtkLevel)
-            playerValue += diff / 3;
-        else if (enemyAtkLevel > playerAtkLevel)
-            enemyValue += diff / 3;
+            if (playerAtkLevel > enemyAtkLevel)
+                playerValue += diff / 3;
+            else if (enemyAtkLevel > playerAtkLevel)
+                enemyValue += diff / 3;
+        }
     }
-}
