@@ -22,4 +22,5 @@ public class GManager : MonoBehaviour
     /// ³¯Â¥
     /// </summary>
     public int Day = 0;
+
 }

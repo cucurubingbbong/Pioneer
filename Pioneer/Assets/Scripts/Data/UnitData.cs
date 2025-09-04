@@ -10,4 +10,5 @@ public class UnitData : ScriptableObject
     public int baseSpeed;
     public int baseMentalPower;
     public Skill[] baseSkill = null;
+    public UnitSpriteData unitSpriteData = null;
 }

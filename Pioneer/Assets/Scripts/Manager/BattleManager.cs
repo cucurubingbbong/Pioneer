@@ -26,6 +26,19 @@ public class BattleManager : MonoBehaviour
     {
         Clash();
     }
+
+    /// <summary>
+    /// 배틀 유닛 세팅
+    /// </summary>
+
+    public void BattleUnitSetting()
+    {
+
+    }
+    /// <summary>
+    /// 합
+    /// </summary>
+    
     void Clash()
     {
         foreach (var clash in clashSkillList)
@@ -106,16 +119,16 @@ public class BattleManager : MonoBehaviour
             return 0; // 없는 주사위는 0으로 처리
         }
 
-        /// <summary>
-        /// 공격 레벨 보정 적용
-        /// </summary>
-        void ApplyAttackLevelBonus(ref int playerValue, ref int enemyValue, int playerAtkLevel, int enemyAtkLevel)
-        {
-            int diff = Mathf.Abs(playerAtkLevel - enemyAtkLevel);
+    /// <summary>
+    /// 공격 레벨 보정 적용
+    /// </summary>
+    void ApplyAttackLevelBonus(ref int playerValue, ref int enemyValue, int playerAtkLevel, int enemyAtkLevel)
+    {
+        int diff = Mathf.Abs(playerAtkLevel - enemyAtkLevel);
 
-            if (playerAtkLevel > enemyAtkLevel)
-                playerValue += diff / 3;
-            else if (enemyAtkLevel > playerAtkLevel)
-                enemyValue += diff / 3;
-        }
+        if (playerAtkLevel > enemyAtkLevel)
+            playerValue += diff / 3;
+        else if (enemyAtkLevel > playerAtkLevel)
+            enemyValue += diff / 3;
     }
+}
