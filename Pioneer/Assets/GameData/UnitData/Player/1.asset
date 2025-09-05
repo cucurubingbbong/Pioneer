@@ -20,3 +20,4 @@ MonoBehaviour:
   baseMentalPower: -35
   baseSkill:
   - {fileID: 11400000, guid: dbc8f1ed471f6ce4f9e467152478e66d, type: 2}
+  unitSpriteData: {fileID: 11400000, guid: eb6fecc310df5cb4db6c3fb20e2e3d7b, type: 2}

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [System.Serializable]
-public class UnitBase : MonoBehaviour
+public class UnitBase 
 {
     public string unitName;
     public float maxHp;
@@ -12,6 +12,7 @@ public class UnitBase : MonoBehaviour
     public int mentalPower;
     public int level = 1;
     public Skill[] skillList = null;
+    public UnitSpriteData m_unitSpriteData = null;
 
     // √ ±‚»≠
     public UnitBase(UnitData data)
@@ -24,6 +25,7 @@ public class UnitBase : MonoBehaviour
         speed = data.baseSpeed;
         mentalPower = data.baseMentalPower;
         skillList = new Skill[data.baseSkill.Length];
+        m_unitSpriteData = data.unitSpriteData;
         for (int i = 0; i < data.baseSkill.Length; i++)
         {
             skillList[i] = data.baseSkill[i]; 

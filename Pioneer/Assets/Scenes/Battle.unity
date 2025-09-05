@@ -691,19 +691,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerUnitBaseTrans:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 24387106}
+  - {fileID: 1144042713}
+  - {fileID: 2037718593}
+  - {fileID: 1775329475}
+  - {fileID: 463192925}
+  - {fileID: 22517244}
   enemyUnitBaseTrans:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 733687926}
+  - {fileID: 764864526}
+  - {fileID: 953062367}
+  - {fileID: 1312097394}
+  - {fileID: 1377469997}
+  - {fileID: 109214188}
   playerUnitView:
   - {fileID: 0}
   - {fileID: 0}
@@ -718,6 +718,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  unitViewObj: {fileID: 7142843171905426614, guid: a674e3e1553254245b441098cb20620c, type: 3}
+  BattleManager: {fileID: 324020888}
 --- !u!1 &1034925350
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,7 +766,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerUnits: []
   officeBattleUnits: []
-  playerData: []
+  playerData:
+  - {fileID: 11400000, guid: 9e4e2014191d457469a2a10a54f1ab70, type: 2}
 --- !u!1 &1144042712
 GameObject:
   m_ObjectHideFlags: 0

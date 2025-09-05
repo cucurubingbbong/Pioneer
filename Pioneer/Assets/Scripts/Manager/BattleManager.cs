@@ -22,19 +22,39 @@ public class BattleManager : MonoBehaviour
     /// </summary>
     public UnitBase[] battlePlayerUnit = new UnitBase[6];
 
-    private void Start()
+    private void Awake()
+    {
+        //BattleSetting();
+    }
+
+    /// <summary>
+    /// 배틀 세팅
+    /// </summary>
+    public void BattleSetting()
+    {
+        GetUnitBase();
+    }
+
+    /// <summary>
+    /// 전투 시작
+    /// </summary>
+    public void BattleStart()
     {
         Clash();
     }
 
     /// <summary>
-    /// 배틀 유닛 세팅
+    /// 사무소에서 전투가능한 유닛베이스 받아오기
     /// </summary>
-
-    public void BattleUnitSetting()
+    void GetUnitBase()
     {
-
+        for (int i = 0; i < 6; i++)
+        {
+            battlePlayerUnit[i] = PlayerOffiece.Instance.officeBattleUnits[i];
+        }
     }
+
+
     /// <summary>
     /// 합
     /// </summary>
@@ -57,16 +77,6 @@ public class BattleManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// 사무소에서 전투가능한 유닛베이스 받아오기
-    /// </summary>
-    void GetUnitBase()
-    {
-        for (int i = 0; i < 6; i++)
-        {
-            battlePlayerUnit[i] = PlayerOffiece.Instance.officeBattleUnits[i];
-        }
-    }
 
     /// <summary>
     /// 주사위 1개 단위의 충돌 처리

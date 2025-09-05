@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 
 public class PlayerOffiece : MonoBehaviour
@@ -35,13 +36,21 @@ public class PlayerOffiece : MonoBehaviour
 
     private void Start()
     {
-        if (playerData.Count == 0)
+        LoadUnit();
+    }
+
+    public void LoadUnit()
+    {
+        if (playerUnits.Count == 0)
         {
             foreach (var unit in playerData)
             {
                 playerUnits.Add(new UnitBase(unit));
             }
+
         }
+
+        SceneEventManager.TriggerSceneStart();
     }
 
     

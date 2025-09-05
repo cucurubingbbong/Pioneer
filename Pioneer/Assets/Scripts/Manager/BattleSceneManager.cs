@@ -43,6 +43,7 @@ public class BattleSceneManager : MonoBehaviour
             viewObj.transform.SetParent(playerUnitBaseTrans[i].transform, false);
             UnitView view = viewObj.AddComponent<UnitView>();
             playerUnitView[i] = view;
+            
         }
     }
 
