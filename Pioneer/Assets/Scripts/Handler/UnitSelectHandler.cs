@@ -1,11 +1,16 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class UnitSelectHandler : MonoBehaviour
 {
     public GameObject unitUIPrefab;   // 유닛 UI 프리팹 (Inspector에서 할당)
     public GameObject unitListParent; // UI 부모 오브젝트 
     public GameObject[] unitUIList = null;
+
+    public GameObject dragUnit = null; // 드래그 하고 있는 유닛
+
+    public Vector3 offset = Vector3.zero; // 마우스와 유닛 오브젝트 사이의 거리
 
     private void OnEnable()
     {

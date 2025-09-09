@@ -18,6 +18,11 @@ public class GManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        
+    }
+
     /// <summary>
     /// ³¯Â¥
     /// </summary>

@@ -12,11 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9726eaf8b65fdda41b069d1923eb27c2, type: 3}
   m_Name: 1_Skill1
   m_EditorClassIdentifier: 
-  skillName: "\uB0B4\uBAB0\uB9B0 \uC2EC\uD310"
+  skillName: 303030?
   skillDice:
-  - minValue: 3
-    maxValue: 7
+  - minValue: 1557
+    maxValue: 88848
+    isBroken: 0
     effect: {fileID: 11400000, guid: bdc792ce2f2b77748b59682215538616, type: 2}
-  - minValue: 4
-    maxValue: 9
+  - minValue: 151235125
+    maxValue: 1353125125
+    isBroken: 0
+    effect: {fileID: 11400000, guid: bdc792ce2f2b77748b59682215538616, type: 2}
+  - minValue: 2147483647
+    maxValue: 2147483647
+    isBroken: 0
     effect: {fileID: 11400000, guid: bdc792ce2f2b77748b59682215538616, type: 2}
