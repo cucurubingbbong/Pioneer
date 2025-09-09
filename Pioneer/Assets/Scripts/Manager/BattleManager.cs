@@ -22,9 +22,15 @@ public class BattleManager : MonoBehaviour
     /// </summary>
     public UnitBase[] battlePlayerUnit = new UnitBase[6];
 
-    private void Awake()
+    /// <summary>
+    /// 배틀 씬 매니저
+    /// </summary>
+
+    public BattleSceneManager battleSceneManager = null;
+
+    private void Start()
     {
-        //BattleSetting();
+        BattleSetting();
     }
 
     /// <summary>
@@ -33,6 +39,7 @@ public class BattleManager : MonoBehaviour
     public void BattleSetting()
     {
         GetUnitBase();
+        battleSceneManager.UnitViewSetting();
     }
 
     /// <summary>
@@ -50,6 +57,7 @@ public class BattleManager : MonoBehaviour
     {
         for (int i = 0; i < 6; i++)
         {
+            if (PlayerOffiece.Instance.officeBattleUnits[i] == null) continue;
             battlePlayerUnit[i] = PlayerOffiece.Instance.officeBattleUnits[i];
         }
     }

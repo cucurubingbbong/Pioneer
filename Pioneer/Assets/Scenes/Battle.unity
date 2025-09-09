@@ -258,7 +258,68 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clashSkillList: []
-  battlePlayerUnit: []
+  battlePlayerUnit:
+  - unitName: 
+    maxHp: 0
+    currentHp: 0
+    attackLevel: 0
+    defenseLevel: 0
+    speed: 0
+    mentalPower: 0
+    level: 0
+    skillList: []
+    m_unitSpriteData: {fileID: 0}
+  - unitName: 
+    maxHp: 0
+    currentHp: 0
+    attackLevel: 0
+    defenseLevel: 0
+    speed: 0
+    mentalPower: 0
+    level: 0
+    skillList: []
+    m_unitSpriteData: {fileID: 0}
+  - unitName: 
+    maxHp: 0
+    currentHp: 0
+    attackLevel: 0
+    defenseLevel: 0
+    speed: 0
+    mentalPower: 0
+    level: 0
+    skillList: []
+    m_unitSpriteData: {fileID: 0}
+  - unitName: 
+    maxHp: 0
+    currentHp: 0
+    attackLevel: 0
+    defenseLevel: 0
+    speed: 0
+    mentalPower: 0
+    level: 0
+    skillList: []
+    m_unitSpriteData: {fileID: 0}
+  - unitName: 
+    maxHp: 0
+    currentHp: 0
+    attackLevel: 0
+    defenseLevel: 0
+    speed: 0
+    mentalPower: 0
+    level: 0
+    skillList: []
+    m_unitSpriteData: {fileID: 0}
+  - unitName: 
+    maxHp: 0
+    currentHp: 0
+    attackLevel: 0
+    defenseLevel: 0
+    speed: 0
+    mentalPower: 0
+    level: 0
+    skillList: []
+    m_unitSpriteData: {fileID: 0}
+  battleSceneManager: {fileID: 976162013}
 --- !u!1 &422543957
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,8 +6,8 @@ public class UnitView : MonoBehaviour
 
     public Sprite unitStandSprite = null;
 
-    void GetUnitSprite()
+    public void GetUnitSprite()
     {
-        unitSprite.sprite = unitStandSprite;
+        if(unitSprite != null && unitStandSprite !=null) unitSprite.sprite = unitStandSprite;
     }
 }

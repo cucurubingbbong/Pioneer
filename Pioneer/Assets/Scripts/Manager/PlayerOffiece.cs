@@ -27,7 +27,7 @@ public class PlayerOffiece : MonoBehaviour
     /// <summary>
     /// 전투가능 유닛
     /// </summary>
-    public UnitBase[] officeBattleUnits = null;
+    public UnitBase[] officeBattleUnits = new UnitBase[6];
 
     /// <summary>
     /// 유닛 데이터 ( SO )

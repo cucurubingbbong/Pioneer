@@ -33,7 +33,7 @@ public class BattleSceneManager : MonoBehaviour
     [SerializeField] BattleManager BattleManager = null;
 
     /// <summary>
-    /// 배틀매니저에의 전투 가능 유닛에서 에셋 뽑아오기
+    /// 배틀매니저의 전투 가능 유닛에서 에셋 뽑아오기
     /// </summary>
     public void UnitViewSetting()
     {
@@ -41,10 +41,21 @@ public class BattleSceneManager : MonoBehaviour
         {
             GameObject viewObj = Instantiate(unitViewObj);
             viewObj.transform.SetParent(playerUnitBaseTrans[i].transform, false);
-            UnitView view = viewObj.AddComponent<UnitView>();
+            UnitView view = viewObj.GetComponent<UnitView>();
             playerUnitView[i] = view;
-            
+            SetUnitSpData(view , i );
         }
     }
+
+    public void SetUnitSpData(UnitView unitView, int n)
+    {
+        if (BattleManager.battlePlayerUnit[n] == null) return;
+        if (BattleManager.battlePlayerUnit[n].m_unitSpriteData == null) return;
+        if (BattleManager.battlePlayerUnit[n].m_unitSpriteData.unitStandSprite == null) return;
+
+        unitView.unitStandSprite = BattleManager.battlePlayerUnit[n].m_unitSpriteData.unitStandSprite;
+        unitView.GetUnitSprite();
+    }
+
 
 }
