@@ -50,4 +50,14 @@ public class OfficeManager : MonoBehaviour
     {
         officeUnit.Remove(unit);
     }
+
+    public void AssignQuest(Quest assignQuest)
+    {
+        quest.Add(assignQuest);
+    }
+
+    public void DenyQuest(Quest denyQuest)
+    {
+        quest.Remove(denyQuest);
+    }
 }

@@ -7,6 +7,7 @@ public enum UIScreenType
     None,
     InGameUi,
     Settings,
+    BattleSet,
     UnitSet,
 }
 
@@ -34,6 +35,13 @@ public class UIManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
         else Destroy(gameObject);
+
+      UIScreenRoot[] uiElements = FindObjectsByType<UIScreenRoot>(FindObjectsInactive.Include,FindObjectsSortMode.None);
+
+        foreach (var elements in uiElements)
+        {
+            elements.Assign();
+        }
     }
 
     public void RegisterScreen(UIScreenType type, GameObject root)
@@ -65,7 +73,12 @@ public class UIManager : MonoBehaviour
 
     public void SetUnit()
     {
-        ShowScreen(UIScreenType.UnitSet);
+        ShowScreen(UIScreenType.BattleSet);
+    }
+
+    public void GameUi()
+    {
+        ShowScreen(UIScreenType.InGameUi);
     }
 }
 

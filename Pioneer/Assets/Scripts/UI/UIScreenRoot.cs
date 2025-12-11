@@ -4,7 +4,8 @@ public class UIScreenRoot : MonoBehaviour
 {
     [SerializeField] private UIScreenType type;
 
-    private void Awake()
+
+     public void Assign()
     {
         if (UIManager.Instance != null)
         {

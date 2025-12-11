@@ -34,7 +34,7 @@ public enum QuestRank
 
 
 [System.Serializable]
-public class Quest: MonoBehaviour
+public class Quest
 {
     /// <summary>
     /// 의뢰를 받기 위한 최소 레벨
