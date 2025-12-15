@@ -414,6 +414,19 @@ MonoBehaviour:
     unitResource: {fileID: 0}
   index: 0
   sUi: {fileID: 1977166482}
+  isBattleUi: 0
+  isSelecting: 0
+--- !u!114 &161864210 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5961876786958241437, guid: de00fbb08bb95114ab7b65f2b4598009, type: 3}
+  m_PrefabInstance: {fileID: 8024352565605964237}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161864207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 889d07c6ac6a65b42b1596d0fc8d8536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SettingUnitView
 --- !u!1 &207042446 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1623467757034526592, guid: de00fbb08bb95114ab7b65f2b4598009, type: 3}
@@ -805,6 +818,19 @@ MonoBehaviour:
     unitResource: {fileID: 0}
   index: 0
   sUi: {fileID: 1977166482}
+  isBattleUi: 0
+  isSelecting: 0
+--- !u!114 &1014797707 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5961876786958241437, guid: de00fbb08bb95114ab7b65f2b4598009, type: 3}
+  m_PrefabInstance: {fileID: 1014797704}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744844525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 889d07c6ac6a65b42b1596d0fc8d8536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SettingUnitView
 --- !u!1 &1058031445
 GameObject:
   m_ObjectHideFlags: 0
@@ -1268,6 +1294,19 @@ MonoBehaviour:
     unitResource: {fileID: 0}
   index: 0
   sUi: {fileID: 1977166482}
+  isBattleUi: 0
+  isSelecting: 0
+--- !u!114 &1325009842 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5961876786958241437, guid: de00fbb08bb95114ab7b65f2b4598009, type: 3}
+  m_PrefabInstance: {fileID: 1325009839}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078511065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 889d07c6ac6a65b42b1596d0fc8d8536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SettingUnitView
 --- !u!1 &1422860660 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1623467757034526592, guid: de00fbb08bb95114ab7b65f2b4598009, type: 3}
@@ -1297,6 +1336,19 @@ MonoBehaviour:
     unitResource: {fileID: 0}
   index: 0
   sUi: {fileID: 1977166482}
+  isBattleUi: 0
+  isSelecting: 0
+--- !u!114 &1422860662 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5961876786958241437, guid: de00fbb08bb95114ab7b65f2b4598009, type: 3}
+  m_PrefabInstance: {fileID: 160036150}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422860660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 889d07c6ac6a65b42b1596d0fc8d8536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SettingUnitView
 --- !u!1 &1572378212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1563,6 +1615,19 @@ MonoBehaviour:
     unitResource: {fileID: 0}
   index: 0
   sUi: {fileID: 1977166482}
+  isBattleUi: 0
+  isSelecting: 0
+--- !u!114 &1719815217 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5961876786958241437, guid: de00fbb08bb95114ab7b65f2b4598009, type: 3}
+  m_PrefabInstance: {fileID: 1719815214}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207042446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 889d07c6ac6a65b42b1596d0fc8d8536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SettingUnitView
 --- !u!1 &1730303147
 GameObject:
   m_ObjectHideFlags: 0
@@ -1609,7 +1674,87 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::OfficeManager
   money: 0
   officeLevel: 0
-  officeUnit: []
+  officeUnit:
+  - unitName: Test111
+    maxHealth: 1111
+    currentHealth: 111
+    attackLevel: 1
+    defenseLevel: 1
+    speed: 1
+    level: 1
+    unitResource: {fileID: 11400000, guid: d6e78a47df9102f4281cdfa2cd85f51f, type: 2}
+  - unitName: Test111
+    maxHealth: 1111
+    currentHealth: 111
+    attackLevel: 1
+    defenseLevel: 1
+    speed: 1
+    level: 1
+    unitResource: {fileID: 11400000, guid: d6e78a47df9102f4281cdfa2cd85f51f, type: 2}
+  - unitName: Test111
+    maxHealth: 1111
+    currentHealth: 111
+    attackLevel: 1
+    defenseLevel: 1
+    speed: 1
+    level: 1
+    unitResource: {fileID: 11400000, guid: d6e78a47df9102f4281cdfa2cd85f51f, type: 2}
+  - unitName: Test111
+    maxHealth: 1111
+    currentHealth: 111
+    attackLevel: 1
+    defenseLevel: 1
+    speed: 1
+    level: 1
+    unitResource: {fileID: 11400000, guid: d6e78a47df9102f4281cdfa2cd85f51f, type: 2}
+  - unitName: Test111
+    maxHealth: 1111
+    currentHealth: 111
+    attackLevel: 1
+    defenseLevel: 1
+    speed: 1
+    level: 1
+    unitResource: {fileID: 11400000, guid: d6e78a47df9102f4281cdfa2cd85f51f, type: 2}
+  - unitName: Test111
+    maxHealth: 1111
+    currentHealth: 111
+    attackLevel: 1
+    defenseLevel: 1
+    speed: 1
+    level: 1
+    unitResource: {fileID: 11400000, guid: d6e78a47df9102f4281cdfa2cd85f51f, type: 2}
+  - unitName: Test111
+    maxHealth: 1111
+    currentHealth: 111
+    attackLevel: 1
+    defenseLevel: 1
+    speed: 1
+    level: 1
+    unitResource: {fileID: 11400000, guid: d6e78a47df9102f4281cdfa2cd85f51f, type: 2}
+  - unitName: Test111
+    maxHealth: 1111
+    currentHealth: 111
+    attackLevel: 1
+    defenseLevel: 1
+    speed: 1
+    level: 1
+    unitResource: {fileID: 11400000, guid: d6e78a47df9102f4281cdfa2cd85f51f, type: 2}
+  - unitName: Test111
+    maxHealth: 1111
+    currentHealth: 111
+    attackLevel: 1
+    defenseLevel: 1
+    speed: 1
+    level: 1
+    unitResource: {fileID: 11400000, guid: d6e78a47df9102f4281cdfa2cd85f51f, type: 2}
+  - unitName: Test111
+    maxHealth: 1111
+    currentHealth: 111
+    attackLevel: 1
+    defenseLevel: 1
+    speed: 1
+    level: 1
+    unitResource: {fileID: 11400000, guid: d6e78a47df9102f4281cdfa2cd85f51f, type: 2}
   battleUnit:
   - unitName: Test
     maxHealth: 120
@@ -1771,13 +1916,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bc9cabdd373ef34891a6f8e9748db85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleUnitUI
-  assignUnit:
-  - {fileID: 161864209}
-  - {fileID: 1014797706}
-  - {fileID: 1891744609}
-  - {fileID: 1325009841}
-  - {fileID: 1719815216}
-  - {fileID: 1422860661}
+  assignUnitView:
+  - {fileID: 161864210}
+  - {fileID: 1014797707}
+  - {fileID: 1891744610}
+  - {fileID: 1325009842}
+  - {fileID: 1719815217}
+  - {fileID: 1422860662}
 --- !u!1001 &1891744607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1911,6 +2056,19 @@ MonoBehaviour:
     unitResource: {fileID: 0}
   index: 0
   sUi: {fileID: 1977166482}
+  isBattleUi: 0
+  isSelecting: 0
+--- !u!114 &1891744610 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5961876786958241437, guid: de00fbb08bb95114ab7b65f2b4598009, type: 3}
+  m_PrefabInstance: {fileID: 1891744607}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322291399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 889d07c6ac6a65b42b1596d0fc8d8536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SettingUnitView
 --- !u!1 &1977166476
 GameObject:
   m_ObjectHideFlags: 0

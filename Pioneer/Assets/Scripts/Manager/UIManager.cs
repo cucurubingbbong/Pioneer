@@ -23,7 +23,7 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance { get; private set; }
 
-    private readonly Dictionary<UIScreenType, GameObject> screenMap = new Dictionary<UIScreenType, GameObject>();
+    public Dictionary<UIScreenType, GameObject> screenMap = new Dictionary<UIScreenType, GameObject>();
 
     public UIScreenType currentScreen = UIScreenType.None;
 

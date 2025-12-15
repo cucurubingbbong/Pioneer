@@ -9,7 +9,7 @@ public class BattleUnitUI : MonoBehaviour
     /// 할당된 전투 유닛 프로필
     /// </summary>
 
-    [SerializeField] SettingUnitView[] assignUnit = new SettingUnitView[6];
+    [SerializeField] SettingUnitView[] assignUnitView = new SettingUnitView[6];
 
     private void OnEnable()
     {
@@ -21,11 +21,11 @@ public class BattleUnitUI : MonoBehaviour
     /// </summary>
     void BattleUnitSetting()
     {
-        for (int i = 0; i < assignUnit.Length; i++)
+        for (int i = 0; i < assignUnitView.Length; i++)
         {
-            if (OfficeManager.Instance.battleUnit[i] == null) return;
-            assignUnit[i].Setting(OfficeManager.Instance.battleUnit[i]);
-            assignUnit[i].unitProfile.sprite = OfficeManager.Instance.battleUnit[i].unitResource.portrait;
+            if (OfficeManager.Instance.battleUnit[i] == null) continue;
+            assignUnitView[i].Setting(OfficeManager.Instance.battleUnit[i]);
+            assignUnitView[i].isBattleUi = true;
         }
     }
     

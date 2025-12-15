@@ -11,28 +11,44 @@ public class SettingUnitView : MonoBehaviour
 
     public SetBattleUnitUI sUi = null;
 
-    bool isBattleUi = false;
+    public bool isBattleUi = false;
 
-    bool isSelecting = false;
+    public bool isSelecting = false;
+
+    private void OnEnable()
+    {
+        GameObject unitSetObj = UIManager.Instance.screenMap[UIScreenType.UnitSet];
+        sUi = unitSetObj.GetComponent<SetBattleUnitUI>();
+    }
 
     public void Setting(Unit unit)
     {
         unitProfile = GetComponentInChildren<Image>();
-
         assignUnit = unit;
+        unitProfile.sprite = assignUnit.unitResource.portrait;
     }
 
     public void OpenUnitSet()
     {
         if (!isBattleUi) return;
-        sUi.currentIndex = index;
         UIManager.Instance.ShowScreen(UIScreenType.UnitSet);
+        sUi.currentIndex = index;
     }
 
     public void Select()
     {
         if (isBattleUi) return;
         OfficeManager.Instance.battleUnit[sUi.currentIndex] = assignUnit;
+    }
+
+    public void Click()
+    {
+        if (isBattleUi)
+        {
+            OpenUnitSet();
+        }
+        else Select();
+
     }
 
     
