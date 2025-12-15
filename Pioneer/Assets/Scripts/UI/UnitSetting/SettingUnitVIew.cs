@@ -31,14 +31,15 @@ public class SettingUnitView : MonoBehaviour
     public void OpenUnitSet()
     {
         if (!isBattleUi) return;
-        UIManager.Instance.ShowScreen(UIScreenType.UnitSet);
         sUi.currentIndex = index;
+        UIManager.Instance.ShowScreen(UIScreenType.UnitSet);
     }
 
     public void Select()
     {
         if (isBattleUi) return;
-        OfficeManager.Instance.battleUnit[sUi.currentIndex] = assignUnit;
+        isSelecting = true;
+        OfficeManager.Instance.battleUnit[sUi.currentIndex-1] = assignUnit;
     }
 
     public void Click()

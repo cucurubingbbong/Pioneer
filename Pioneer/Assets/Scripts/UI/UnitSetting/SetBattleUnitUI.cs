@@ -1,3 +1,5 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SetBattleUnitUI : MonoBehaviour
@@ -5,6 +7,8 @@ public class SetBattleUnitUI : MonoBehaviour
     [SerializeField] GameObject battleUnitUi = null;
 
     [SerializeField] Transform placeUiTrans = null;
+
+    [SerializeField] List<GameObject> currentPageObj = new List<GameObject>();
 
     /// <summary>
     /// 현재 선택된 편성순서
@@ -14,7 +18,11 @@ public class SetBattleUnitUI : MonoBehaviour
     private void OnEnable()
     {
         SettingPage(1);
-        Debug.Log("전투유닛세팅창");
+    }
+
+    private void OnDisable()
+    {
+        DeletePage();
     }
 
     void SettingPage(int pageIndex)
@@ -26,9 +34,20 @@ public class SetBattleUnitUI : MonoBehaviour
         for (int i = start; i < end; i++)
         {
             GameObject obj = Instantiate(battleUnitUi, placeUiTrans);
+            currentPageObj.Add(obj);
             SettingUnitView bi = obj.GetComponent<SettingUnitView>();
             bi.isBattleUi = false;
             bi.Setting(OfficeManager.Instance.officeUnit[i]);
         }
+    }
+
+    void DeletePage()
+    {
+        foreach (GameObject obj in currentPageObj)
+        {
+            Destroy(obj);
+        }
+
+        currentPageObj = new List<GameObject>();
     }
 }

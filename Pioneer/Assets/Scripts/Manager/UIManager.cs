@@ -80,5 +80,10 @@ public class UIManager : MonoBehaviour
     {
         ShowScreen(UIScreenType.InGameUi);
     }
+
+    public void Office()
+    {
+        ShowScreen(UIScreenType.InGameUi);
+    }
 }
 
