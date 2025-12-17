@@ -1,6 +1,10 @@
 using UnityEngine;
 
+/// <summary>
+/// 유닛별 Ui 리소스 -> Unit에 부착해 사용
+/// </summary>
 [CreateAssetMenu(fileName = "UnitResource", menuName = "UnitData/UnitResource")]
+
 public class UnitResource : ScriptableObject
 {
     [Header("UI용 리소스")]

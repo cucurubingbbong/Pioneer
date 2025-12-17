@@ -40,21 +40,37 @@ public class OfficeManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
+    /// <summary>
+    /// 유닛 할당
+    /// </summary>
+    /// <param name="unit">할당할 유닛</param>
     public void AssignUnit(Unit unit)
     {
         officeUnit.Add(unit);
     }
 
+    /// <summary>
+    /// 유닛 제거
+    /// </summary>
+    /// <param name="unit">제거할 유닛</param>
     public void DeleteUnit(Unit unit)
     {
         officeUnit.Remove(unit);
     }
 
+    /// <summary>
+    /// 퀘스트 할당
+    /// </summary>
+    /// <param name="assignQuest">할당할 퀘스트</param>
     public void AssignQuest(Quest assignQuest)
     {
         quest.Add(assignQuest);
     }
 
+    /// <summary>
+    /// 퀘스트 거절
+    /// </summary>
+    /// <param name="denyQuest">거절할 퀘스트</param>
     public void DenyQuest(Quest denyQuest)
     {
         quest.Remove(denyQuest);

@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// 씬 매니저
+/// </summary>
 public class SceneManagerEx : MonoBehaviour
 {
     public static SceneManagerEx Instance;
@@ -18,6 +21,10 @@ public class SceneManagerEx : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 씬 로드
+    /// </summary>
+    /// <param name="sceneName">로딩할 씬</param>
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);

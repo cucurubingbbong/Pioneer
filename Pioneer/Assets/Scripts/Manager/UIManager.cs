@@ -2,6 +2,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+/// <summary>
+/// UI 유형
+/// </summary>
 public enum UIScreenType
 {
     None,
@@ -44,12 +47,23 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 패널 등록
+    /// </summary>
+    /// <param name="type">유형</param>
+    /// <param name="root">등록할 패널</param>
+
     public void RegisterScreen(UIScreenType type, GameObject root)
     {
         screenMap[type] = root;
         root.SetActive(false);
     }
 
+    /// <summary>
+    /// 패널 해제
+    /// </summary>
+    /// <param name="type">해제할 유형</param>
+    /// <param name="root">해제할 패널</param>
     public void UnregisterScreen(UIScreenType type, GameObject root)
     {
         if (screenMap.TryGetValue(type, out var stored) && stored == root)
@@ -58,6 +72,10 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 패널 보여주기
+    /// </summary>
+    /// <param name="type">보여줄 유형</param>
     public void ShowScreen(UIScreenType type)
     {
 

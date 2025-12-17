@@ -11,6 +11,11 @@ public class SetBattleUnitUI : MonoBehaviour
     [SerializeField] List<GameObject> currentPageObj = new List<GameObject>();
 
     /// <summary>
+    /// 마지막으로 선택된 유닛뷰 ui
+    /// </summary>
+    public SettingUnitView lastSelectUnitView = null;
+
+    /// <summary>
     /// 현재 선택된 편성순서
     /// </summary>
     public int currentIndex = 0;
@@ -25,6 +30,10 @@ public class SetBattleUnitUI : MonoBehaviour
         DeletePage();
     }
 
+    /// <summary>
+    /// 선택화면 세팅
+    /// </summary>
+    /// <param name="pageIndex">페이지번호</param>
     void SettingPage(int pageIndex)
     {
         const int pageSize = 10;
@@ -41,6 +50,9 @@ public class SetBattleUnitUI : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 페이지 초기화
+    /// </summary>
     void DeletePage()
     {
         foreach (GameObject obj in currentPageObj)

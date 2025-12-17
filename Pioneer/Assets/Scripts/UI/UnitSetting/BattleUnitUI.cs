@@ -24,8 +24,8 @@ public class BattleUnitUI : MonoBehaviour
         for (int i = 0; i < assignUnitView.Length; i++)
         {
             if (OfficeManager.Instance.battleUnit[i] == null) continue;
+            assignUnitView[i].isBattleUi = true; // battle 슬롯은 선택 로직을 건너뛰게 먼저 설정
             assignUnitView[i].Setting(OfficeManager.Instance.battleUnit[i]);
-            assignUnitView[i].isBattleUi = true;
         }
     }
     
