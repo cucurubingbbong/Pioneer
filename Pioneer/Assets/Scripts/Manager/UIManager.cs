@@ -45,6 +45,8 @@ public class UIManager : MonoBehaviour
         {
             elements.Assign();
         }
+
+        ShowScreen(UIScreenType.InGameUi);
     }
 
     /// <summary>
